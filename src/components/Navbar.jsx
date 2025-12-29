@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* LOGO */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src="/Logo.jpeg"
+            src="/Logo1.jpeg"
             alt="AdvoraLaw Logo"
             width={60}
             height={60}
