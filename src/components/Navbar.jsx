@@ -171,7 +171,7 @@ export default function Navbar() {
       border border-green-600 text-green-600 py-3 rounded-full
       hover:bg-green-600 hover:text-white transition-all duration-300"
     >
-      <span className="text-lg italic">💬</span>
+      <span className="text-lg italic"></span>
       WhatsApp
     </Link>
 
