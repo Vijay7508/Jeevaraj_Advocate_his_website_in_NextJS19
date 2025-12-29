@@ -67,46 +67,53 @@ export default function HomePage() {
     <main className="bg-gray-50 min-h-screen italic">
 
       {/* HERO SECTION */}
-    <section className="relative h-screen w-full">
+    <section className="relative min-h-screen w-full overflow-hidden">
 
-      {/* BACKGROUND IMAGE */}
-      <Image
-        src="/Background.png"
-        alt="Law Firm Background"
-        fill
-        priority
-        className="object-cover"
-      />
+  {/* BACKGROUND IMAGE */}
+  <Image
+    src="/Background.png"
+    alt="Law Firm Background"
+    fill
+    priority
+    sizes="100vw"
+    className="
+      object-cover
+      object-center
+      sm:object-top
+    "
+  />
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/60" />
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-black/60" />
 
-      {/* CONTENT */}
-      <div className="relative z-10 flex h-full items-center justify-center px-4">
-        <div className="max-w-2xl text-center backdrop-blur-md bg-white/10
-        border border-white/20 rounded-2xl px-10 py-12 shadow-2xl">
+  {/* CONTENT */}
+  <div className="relative z-10 flex min-h-screen items-center justify-center px-4 sm:px-6">
+    <div className="w-full max-w-xl text-center backdrop-blur-md bg-white/10
+      border border-white/20 rounded-2xl px-6 py-8 sm:px-10 sm:py-12 shadow-2xl">
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Your Justice. Our Passion.
-          </h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-snug">
+        Your Justice. Our Passion.
+      </h1>
 
-          <p className="mt-4 text-gray-200 text-lg">
-            Trusted Legal Advisors Serving You With Expertise & Integrity.
-          </p>
+      <p className="mt-3 sm:mt-4 text-gray-200 text-base sm:text-lg">
+        Trusted Legal Advisors Serving You With Expertise & Integrity.
+      </p>
 
-          <a
-            href="/contact"
-            className="inline-block mt-8 bg-yellow-500 text-black
-            px-8 py-3 rounded-full font-semibold
-            hover:bg-yellow-400 transition"
-          >
-            Book Free Consultation
-          </a>
+      <a
+        href="/contact"
+        className="block sm:inline-block mt-6 sm:mt-8
+        bg-yellow-500 text-black px-6 sm:px-8 py-3 rounded-full
+        rounded-full font-semibold hover:bg-yellow-400 transition"
+      >
+        Book Free Consultation
+      </a>
 
-        </div>
-      </div>
+    </div>
+  </div>
 
-    </section>
+</section>
+
+
 
 
       {/* FIRM OVERVIEW */}
