@@ -1,0 +1,97 @@
+"use client";
+import Link from "next/link";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-300 mt-16 italic">
+
+      {/* TOP FOOTER */}
+      <div className="max-w-7xl mx-auto px-6 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+        {/* BRAND */}
+        <div className="animate-fadeUp">
+          <h3 className="text-white text-xl font-semibold mb-3">
+            AdvoRa<span className="text-gray-400 font-normal">Law</span>
+          </h3>
+          <p className="text-sm leading-relaxed text-gray-400">
+            Trusted legal professionals delivering ethical, timely and
+            result-oriented legal solutions for individuals and businesses.
+          </p>
+        </div>
+
+        {/* CONTACT */}
+        <div className="animate-fadeUp delay-100">
+          <h4 className="text-white font-semibold mb-4">Contact Us</h4>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-start gap-3">
+              <FaMapMarkerAlt className="mt-1 text-gray-400" />
+              <span>123 Legal Street, City, State</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaPhoneAlt className="text-gray-400" />
+              <span>+91 9876543210</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-gray-400" />
+              <span>info@advoralaw.in</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div className="animate-fadeUp delay-200">
+          <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+          <ul className="space-y-2 text-sm">
+            {[
+              { name: "Home", link: "/" },
+              { name: "About Us", link: "/about" },
+              { name: "Practice Areas", link: "/practice-areas" },
+              { name: "Legal Services", link: "/legal-services" },
+              { name: "Contact Us", link: "/contact" },
+            ].map((item, i) => (
+              <li key={i}>
+                <Link
+                  href={item.link}
+                  className="hover:text-white transition-all hover:translate-x-1 inline-block"
+                >
+                  → {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* LEGAL */}
+        <div className="animate-fadeUp delay-300">
+          <h4 className="text-white font-semibold mb-4">Legal</h4>
+          <ul className="space-y-2 text-sm">
+            {[
+              "Privacy Policy",
+              "Terms & Conditions",
+              "Disclaimer",
+              "Bar Council Compliance",
+              "Sitemap",
+            ].map((item, i) => (
+              <li key={i}>
+                <Link
+                  href={`/${item.toLowerCase().replace(/ /g, "-")}`}
+                  className="hover:text-white transition-all hover:translate-x-1 inline-block"
+                >
+                  → {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} AdvoRaLaw. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}
