@@ -1,27 +1,37 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import { practiceAreas, legalServices } from "./Dropdown";
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
+  const [legalOpen, setLegalOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(legalServices[0]);
+  const closeTimer = useRef(null);
+  const [legalMobileOpen, setLegalMobileOpen] = useState(false);
 
-  const practiceAreas = [
-    "Civil Litigation",
-    "Criminal Law",
-    "Bail Matters",
-    "Family & Matrimonial Law",
-    "Labour & Employment Law",
-    "Corporate & Commercial Law",
-    "Property & Real Estate Law",
-    "Cheque Bounce / NI Act",
-    "Consumer Protection",
-    "Service Matters",
-    "Arbitration & Mediation",
-    "Legal Compliance & Advisory",
-  ];
+
+
+const handleMouseEnter = () => {
+  if (closeTimer.current) {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+  }
+  setLegalOpen(true);
+};
+
+const handleMouseLeave = () => {
+  closeTimer.current = setTimeout(() => {
+    setLegalOpen(false);
+  }, 2000); // 👈 2 seconds hold
+};
+
+
+  
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b shadow-sm italic ">
@@ -85,9 +95,82 @@ export default function Navbar() {
   </div>
 
   {/* LEGAL SERVICES */}
-  <Link href="/legal_services" className="nav-link">
+ <div
+  className="relative"
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+  <button className="flex items-center gap-1 hover:text-gray-900 transition">
     Legal Services
-  </Link>
+    <span
+      className={`text-xs transition-transform ${
+        legalOpen ? "rotate-180" : ""
+      }`}
+    >
+      ▾
+    </span>
+  </button>
+
+  {/* DROPDOWN */}
+  <div
+    className={`absolute left-0 top-full mt-2 w-[650px]
+    bg-white border rounded-xl shadow-2xl
+    flex overflow-hidden
+    transition-all duration-300 ease-out
+    ${legalOpen ? "opacity-100 scale-100" : "opacity-0 scale-[0.98] pointer-events-none"}`}
+  >
+    {/* LEFT SIDE – TITLES */}
+    <div className="w-[280px] bg-gray-50 p-4 space-y-1">
+      {legalServices.map((section) => (
+        <div
+          key={section.title}
+          onMouseEnter={() => setActiveSection(section)}
+          className={`cursor-pointer px-3 py-2 rounded-md text-sm font-semibold
+          transition-all duration-200
+          ${
+            activeSection.title === section.title
+              ? "bg-white shadow text-gray-900 pl-5"
+              : "text-gray-700 hover:bg-white hover:pl-5"
+          }`}
+        >
+          {section.title}
+        </div>
+      ))}
+    </div>
+
+    {/* RIGHT SIDE – CONTENT */}
+    <div
+      key={activeSection.title}
+      className="flex-1 p-5 bg-white animate-[fadeSlide_0.25s_ease-out]"
+    >
+      <h4 className="mb-4 font-bold text-gray-900 text-sm">
+        {activeSection.title}
+      </h4>
+
+      <ul className="space-y-2">
+        {activeSection.items.map((item) => (
+          <li key={item}>
+            <Link
+              href={`/legal-services/${item
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-")}`}
+              className="block text-sm text-gray-600
+              transition-all duration-200
+              hover:text-gray-900 hover:translate-x-1"
+            >
+              {item}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
   {/* CLIENT RESOURCES */}
   <Link href="/client_resources" className="nav-link">
@@ -149,9 +232,55 @@ export default function Navbar() {
       Practice Areas
     </Link>
 
-    <Link href="/legal_services" onClick={() => setMenuOpen(false)} className="hover:text-gray-700">
-      Legal Services
-    </Link>
+    {/* LEGAL SERVICES – MOBILE ACCORDION */}
+<div>
+  <button
+    onClick={() => setLegalMobileOpen(!legalMobileOpen)}
+    className="w-full flex items-center justify-between hover:text-gray-700"
+  >
+    <span>Legal Services</span>
+    <span
+      className={`transition-transform duration-300 ${
+        legalMobileOpen ? "rotate-180" : ""
+      }`}
+    >
+      ▾
+    </span>
+  </button>
+
+  <div
+    className={`overflow-hidden transition-all duration-300 ease-out
+    ${legalMobileOpen ? "max-h-[1000px] mt-3" : "max-h-0"}`}
+  >
+    {legalServices.map((section) => (
+      <div key={section.title} className="mb-4">
+        <p className="text-sm font-bold text-gray-800 mb-2">
+          {section.title}
+        </p>
+
+        <ul className="space-y-2 pl-3">
+          {section.items.map((item) => (
+            <li key={item}>
+              <Link
+                href={`/legal-services/${item
+                  .toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")}`}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setLegalMobileOpen(false);
+                }}
+                className="block text-sm text-gray-600 hover:text-gray-900 transition"
+              >
+                {item}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
+
 
     <Link href="/client-resources" onClick={() => setMenuOpen(false)} className="hover:text-gray-700">
       Client Resources
