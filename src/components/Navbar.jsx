@@ -12,7 +12,9 @@ export default function Navbar() {
   const [legalOpen, setLegalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(legalServices[0]);
   const closeTimer = useRef(null);
-  const [legalMobileOpen, setLegalMobileOpen] = useState(false);
+const [legalMobileOpen, setLegalMobileOpen] = useState(false);
+const [activeMobileSection, setActiveMobileSection] = useState(null);
+
 
 
 
@@ -233,10 +235,16 @@ const handleMouseLeave = () => {
     </Link>
 
     {/* LEGAL SERVICES – MOBILE ACCORDION */}
-<div>
+{/* LEGAL SERVICES – MOBILE */}
+<div className="space-y-3">
+
+  {/* MAIN TOGGLE */}
   <button
-    onClick={() => setLegalMobileOpen(!legalMobileOpen)}
-    className="w-full flex items-center justify-between hover:text-gray-700"
+    onClick={() => {
+      setLegalMobileOpen(!legalMobileOpen);
+      setActiveMobileSection(null);
+    }}
+    className="w-full flex items-center justify-between font-semibold"
   >
     <span>Legal Services</span>
     <span
@@ -248,38 +256,66 @@ const handleMouseLeave = () => {
     </span>
   </button>
 
+  {/* LEVEL 1 – TITLES */}
   <div
     className={`overflow-hidden transition-all duration-300 ease-out
-    ${legalMobileOpen ? "max-h-[1000px] mt-3" : "max-h-0"}`}
+    ${legalMobileOpen ? "max-h-[2000px]" : "max-h-0"}`}
   >
-    {legalServices.map((section) => (
-      <div key={section.title} className="mb-4">
-        <p className="text-sm font-bold text-gray-800 mb-2">
-          {section.title}
-        </p>
+    {legalServices.map((section) => {
+      const isActive = activeMobileSection === section.title;
 
-        <ul className="space-y-2 pl-3">
-          {section.items.map((item) => (
-            <li key={item}>
-              <Link
-                href={`/legal-services/${item
-                  .toLowerCase()
-                  .replace(/[^a-z0-9]+/g, "-")}`}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setLegalMobileOpen(false);
-                }}
-                className="block text-sm text-gray-600 hover:text-gray-900 transition"
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+      return (
+        <div key={section.title} className="border-l pl-3 py-2">
+
+          {/* TITLE */}
+          <button
+            onClick={() =>
+              setActiveMobileSection(isActive ? null : section.title)
+            }
+            className="w-full flex items-center justify-between text-left text-sm font-semibold text-gray-800"
+          >
+            {section.title}
+            <span
+              className={`transition-transform duration-300 ${
+                isActive ? "rotate-90" : ""
+              }`}
+            >
+              ▸
+            </span>
+          </button>
+
+          {/* LEVEL 2 – ITEMS */}
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-out
+            ${isActive ? "max-h-[800px] mt-2" : "max-h-0"}`}
+          >
+            <ul className="space-y-2 pl-3">
+              {section.items.map((item) => (
+                <li key={item}>
+                  <Link
+                    href={`/legal-services/${item
+                      .toLowerCase()
+                      .replace(/[^a-z0-9]+/g, "-")}`}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      setLegalMobileOpen(false);
+                      setActiveMobileSection(null);
+                    }}
+                    className="block text-sm text-gray-600 hover:text-gray-900 transition"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      );
+    })}
   </div>
 </div>
+
 
 
     <Link href="/client-resources" onClick={() => setMenuOpen(false)} className="hover:text-gray-700">
