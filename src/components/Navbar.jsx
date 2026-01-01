@@ -328,17 +328,18 @@ const handleMouseLeave = () => {
 
     {/* WHATSAPP CTA */}
     <Link
-      href="https://wa.me/91XXXXXXXXXX?text=Hello,%20I%20need%20a%20legal%20consultation"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => setMenuOpen(false)}
-      className="mt-6 flex items-center justify-center gap-2
-      border border-green-600 text-green-600 py-3 rounded-full
-      hover:bg-green-600 hover:text-white transition-all duration-300"
-    >
-      <span className="text-lg italic"></span>
-      WhatsApp
-    </Link>
+  href="https://wa.me/917888326148?text=Hello,%20I%20need%20a%20legal%20consultation"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+  className="mt-6 flex items-center justify-center gap-2
+  border border-green-600 text-green-600 py-3 rounded-full
+  hover:bg-green-600 hover:text-white transition-all duration-300"
+>
+  <span className="text-lg italic"></span>
+  WhatsApp
+</Link>
+
 
   </nav>
 </div>

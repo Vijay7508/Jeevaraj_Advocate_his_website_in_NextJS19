@@ -128,7 +128,8 @@ Area of Practice
     transition={{ type: "spring", stiffness: 300 }}
     className="h-14 w-14 rounded-full bg-gray-100 text-gray-700 hover:bg-green-500 hover:text-white shadow-md hover:shadow-lg flex items-center justify-center"
   >
-    <FaWhatsapp className="text-xl" />
+    <FaWhatsapp className="text-xl "   href="https://wa.me/917888326148?text=Hello,%20I%20need%20a%20legal%20consultation"
+ />
   </motion.button>
 
   {/* View Details */}
