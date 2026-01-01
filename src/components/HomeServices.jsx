@@ -122,15 +122,23 @@ Area of Practice
   </motion.button>
 
   {/* WhatsApp */}
-  <motion.button
-    whileHover={{ y: -6, scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-    transition={{ type: "spring", stiffness: 300 }}
-    className="h-14 w-14 rounded-full bg-gray-100 text-gray-700 hover:bg-green-500 hover:text-white shadow-md hover:shadow-lg flex items-center justify-center"
-  >
-    <FaWhatsapp className="text-xl "   href="https://wa.me/917888326148?text=Hello,%20I%20need%20a%20legal%20consultation"
- />
-  </motion.button>
+ <motion.button
+  onClick={() =>
+    window.open(
+      "https://wa.me/917888326148?text=Hello,%20I%20need%20a%20legal%20consultation",
+      "_blank"
+    )
+  }
+  whileHover={{ y: -6, scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="h-14 w-14 rounded-full bg-gray-100 text-gray-700
+  hover:bg-green-500 hover:text-white shadow-md hover:shadow-lg
+  flex items-center justify-center"
+>
+  <FaWhatsapp className="text-xl" />
+</motion.button>
+
 
   {/* View Details */}
   <motion.button
