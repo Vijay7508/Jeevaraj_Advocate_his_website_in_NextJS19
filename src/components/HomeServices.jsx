@@ -113,13 +113,19 @@ Area of Practice
       <div className="mt-6 flex justify-center gap-6">
   {/* Call */}
   <motion.button
-    whileHover={{ y: -6, scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-    transition={{ type: "spring", stiffness: 300 }}
-    className="h-14 w-14 rounded-full bg-gray-100 text-gray-700 hover:bg-yellow-500 hover:text-white shadow-md hover:shadow-lg flex items-center justify-center"
-  >
-    <FaPhoneAlt className="text-lg" />
-  </motion.button>
+  onClick={() => {
+    window.location.href = "tel:7888326148";
+  }}
+  whileHover={{ y: -6, scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="h-14 w-14 rounded-full bg-gray-100 text-gray-700
+  hover:bg-yellow-500 hover:text-white shadow-md hover:shadow-lg
+  flex items-center justify-center"
+>
+  <FaPhoneAlt className="text-lg" />
+</motion.button>
+
 
   {/* WhatsApp */}
  <motion.button
