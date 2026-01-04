@@ -46,8 +46,7 @@ export default function Footer() {
             {[
               { name: "Home", link: "/" },
               { name: "About Us", link: "/about" },
-              { name: "Practice Areas", link: "/practice-areas" },
-              { name: "Legal Services", link: "/legal-services" },
+              { name: "Client Resource", link: "/client_resources"},
               { name: "Contact Us", link: "/contact" },
             ].map((item, i) => (
               <li key={i}>
