@@ -93,10 +93,8 @@ Defending What Matters in Law          </h1>
             To serve clients with integrity, clarity, and legal excellence.
           </p>
 
-          <a
-  href="https://wa.me/917888326148?text=Hello,%20I%20would%20like%20to%20book%20a%20free%20legal%20consultation"
-  target="_blank"
-  rel="noopener noreferrer"
+   <a
+  href="tel:+917888326148"
   className="inline-flex items-center gap-2 mt-8
   bg-yellow-500 text-black
   px-8 py-3 rounded-full font-semibold
@@ -104,6 +102,7 @@ Defending What Matters in Law          </h1>
 >
   Book Free Consultation
 </a>
+
 
 
         </div>
