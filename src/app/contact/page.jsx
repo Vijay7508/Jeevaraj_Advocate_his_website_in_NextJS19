@@ -57,14 +57,14 @@ export default function ContactUsSection() {
           {/* WhatsApp / Call Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917888326148"
               target="_blank"
               className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-medium"
             >
               <FaWhatsapp /> WhatsApp
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+917888326148"
               className="flex items-center justify-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition font-medium"
             >
               <FaPhoneAlt /> Call
@@ -101,7 +101,7 @@ export default function ContactUsSection() {
             <FaPhoneAlt className="text-3xl text-gray-800 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Phone</h4>
-              <p className="text-gray-700">+91 98765 43210</p>
+              <p className="text-gray-700">+91 7888326148</p>
             </div>
           </div>
 

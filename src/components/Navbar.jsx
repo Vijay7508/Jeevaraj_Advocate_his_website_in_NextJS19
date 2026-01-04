@@ -230,6 +230,7 @@ export default function Navbar() {
                         >
                           {item}
                         </Link>
+
                       </li>
                     ))}
                   </ul>
@@ -237,6 +238,8 @@ export default function Navbar() {
               </div>
             ))}
           </div>
+          <Link href="/client_resources" onClick={() => setMenuOpen(false)} className="hover:text-amber-400">Client Resource</Link>
+
 
           <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-amber-400">
             Contact Us
