@@ -83,15 +83,14 @@ export default function HomePage() {
 
       {/* CONTENT */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">
-        <div className="max-w-2xl text-center backdrop-blur-md bg-white/10
+        <div className="max-w-5xl text-center backdrop-blur-md bg-white/10
         border border-white/20 rounded-2xl px-10 py-12 shadow-2xl">
 
           <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            Your Justice. Our Passion.
-          </h1>
+Defending What Matters in Law          </h1>
 
           <p className="mt-4 text-gray-200 text-lg">
-            Trusted Legal Advisors Serving You With Expertise & Integrity.
+            To serve clients with integrity, clarity, and legal excellence.
           </p>
 
           <a

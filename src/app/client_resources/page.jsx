@@ -74,7 +74,7 @@ export default function ClientResources() {
         px: { xs: 2, md: 6 }, // side padding (mobile + desktop)
       }}
     >
-      <Box
+      {/* <Box
         sx={{
           borderRadius: 4,
           boxShadow: 4,
@@ -127,7 +127,7 @@ export default function ClientResources() {
             </AccordionDetails>
           </Accordion>
         </CardContent>
-      </Box>
+      </Box> */}
     </Container>
   </motion.div>
 </Box>
