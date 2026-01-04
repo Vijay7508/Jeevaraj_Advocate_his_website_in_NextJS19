@@ -94,13 +94,17 @@ Defending What Matters in Law          </h1>
           </p>
 
           <a
-            href="/contact"
-            className="inline-block mt-8 bg-yellow-500 text-black
-            px-8 py-3 rounded-full font-semibold
-            hover:bg-yellow-400 transition"
-          >
-            Book Free Consultation
-          </a>
+  href="https://wa.me/917888326148?text=Hello,%20I%20would%20like%20to%20book%20a%20free%20legal%20consultation"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 mt-8
+  bg-yellow-500 text-black
+  px-8 py-3 rounded-full font-semibold
+  hover:bg-yellow-400 transition"
+>
+  Book Free Consultation
+</a>
+
 
         </div>
       </div>
