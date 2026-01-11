@@ -88,14 +88,22 @@ export default function ContactUsSection() {
         {/* Contact Info */}
         <div className="bg-white rounded-2xl shadow-xl p-10 space-y-6 animate-fadeLeft">
           <div className="flex items-start gap-4">
-            <FaMapMarkerAlt className="text-3xl text-gray-800 mt-1" />
-            <div>
-              <h4 className="font-semibold text-gray-900">Office Address</h4>
-              <p className="text-gray-700">
-                District Court Complex, Sector‑43, Chandigarh, India
-              </p>
-            </div>
-          </div>
+  <FaMapMarkerAlt className="text-3xl text-gray-800 mt-1" />
+  <div>
+    <h4 className="font-semibold text-gray-900">Office Address</h4>
+
+    <p className="text-gray-700 mt-1">
+      <strong>Chandigarh Office:</strong><br />
+      Chamber No. 455, District Courts, Sector-43, Chandigarh, India
+    </p>
+
+    <p className="text-gray-700 mt-2">
+      <strong>Mohali / Kharar Office:</strong><br />
+      House No. 30, Dashmesh Nagar, Kharar, Mohali, Punjab
+    </p>
+  </div>
+</div>
+
 
           <div className="flex items-start gap-4">
             <FaPhoneAlt className="text-3xl text-gray-800 mt-1" />
@@ -109,7 +117,7 @@ export default function ContactUsSection() {
             <FaEnvelope className="text-3xl text-gray-800 mt-1" />
             <div>
               <h4 className="font-semibold text-gray-900">Email</h4>
-              <p className="text-gray-700">info@advoralaw.in</p>
+              <p className="text-gray-700">advoralaw@gmail.com</p>
             </div>
           </div>
         </div>

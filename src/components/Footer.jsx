@@ -25,16 +25,21 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4">Contact Us</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3">
-              <FaMapMarkerAlt className="mt-1 text-gray-400" />
-              <span>123 Legal Street, City, State</span>
-            </li>
+  <FaMapMarkerAlt className="mt-1 text-gray-400" />
+  <span>
+    <strong>Chandigarh Office:</strong> Chamber No. 455, District Courts, Sector 43, Chandigarh.
+    <br />
+    <strong>Mohali/Kharar Office:</strong> House No. 30, Dashmesh Nagar, Kharar, Mohali.
+  </span>
+</li>
+
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-gray-400" />
               <span>+91 7888326148</span>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-gray-400" />
-              <span>info@advoralaw.in</span>
+              <span>advoralaw@gmail.com</span>
             </li>
           </ul>
         </div>
