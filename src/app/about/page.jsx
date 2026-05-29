@@ -122,7 +122,7 @@ export default function AboutPage() {
   {/* Content */}
   <div className="relative max-w-7xl mx-auto px-6 text-center animate-fadeUp">
     <h1 className="text-4xl md:text-6xl font-bold text-white mb-5 leading-tight italic">
-      About <span className="text-gray-200 font-semibold">AdvoRaLaw</span>
+      About <span className="text-gray-200 font-semibold">Advo</span>
     </h1>
 
     <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto italic">
