@@ -11,6 +11,7 @@ import {
   Briefcase,
   Users,
 } from "lucide-react";
+import Head from "next/head";
 
 const services = [
   {
@@ -66,6 +67,78 @@ const item = {
 export default function LegalServices() {
   return (
     <>
+    <Head>
+  <title>
+    Professional Legal Services in Chandigarh & Mohali | AdvoraLaw
+  </title>
+
+  <meta
+    name="description"
+    content="AdvoraLaw offers professional legal services including legal consultation, court representation, legal notices, drafting and vetting of documents, due diligence, corporate retainer services and legal advisory programs in Chandigarh, Mohali and Punjab."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    Legal Services Chandigarh,
+    Professional Lawyer Mohali,
+    Legal Consultation Punjab,
+    Court Representation Lawyer,
+    Legal Notice Advocate,
+    Drafting and Vetting Services,
+    Due Diligence Lawyer,
+    Corporate Legal Services,
+    Retainer Services for Companies,
+    Legal Advisory Programs,
+    Court Case Lawyer Chandigarh,
+    Business Legal Advisor,
+    Contract Drafting Lawyer,
+    Property Verification Lawyer,
+    Legal Documentation Services,
+    Criminal Lawyer Chandigarh,
+    Civil Lawyer Mohali,
+    Family Lawyer Punjab,
+    Corporate Lawyer Chandigarh,
+    Legal Experts Mohali,
+    Best Advocate Chandigarh,
+    Trusted Lawyer Punjab,
+    Legal Assistance Chandigarh,
+    Chandigarh Court Advocate,
+    Mohali Legal Consultant,
+    Professional Legal Support,
+    AdvoraLaw,
+    Advocates and Legal Consultants
+    "
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AdvoraLaw" />
+
+  {/* Open Graph SEO */}
+  <meta
+    property="og:title"
+    content="Professional Legal Services | AdvoraLaw"
+  />
+
+  <meta
+    property="og:description"
+    content="Reliable and result-oriented legal solutions including consultation, court representation, legal drafting and corporate legal services."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Responsive */}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  {/* Canonical */}
+  <link rel="canonical" href="https://www.advoralaw.com/legal-services" />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
       {/* HERO SECTION */}
       <section className="relative bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden italic">
        <div

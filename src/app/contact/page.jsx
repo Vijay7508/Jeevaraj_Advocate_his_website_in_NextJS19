@@ -5,9 +5,60 @@ import {
   FaEnvelope,
   FaWhatsapp,
 } from "react-icons/fa";
+import Head from "next/head";
 
 export default function ContactUsSection() {
   return (
+    <>
+<Head>
+  <title>Best Advocate in Chandigarh & Mohali | Legal Services</title>
+
+  <meta
+    name="description"
+    content="Professional legal services in Chandigarh, Mohali & Kharar. Expert advocate for criminal, civil, family, divorce, property and court cases. Contact now for legal consultation."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    Advocate in Chandigarh,
+    Lawyer in Mohali,
+    Best Advocate in Kharar,
+    Criminal Lawyer Chandigarh,
+    Civil Lawyer Mohali,
+    Divorce Lawyer Chandigarh,
+    Property Lawyer Punjab,
+    Family Lawyer Mohali,
+    Legal Services Chandigarh,
+    Court Case Lawyer Punjab,
+    District Court Chandigarh Advocate,
+    High Court Lawyer Chandigarh,
+    Chandigarh Legal Consultant,
+    Punjab Advocate Services,
+    Best Lawyer in Punjab
+    "
+  />
+
+  <meta name="author" content="Advora Law" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Best Advocate in Chandigarh & Mohali | Legal Services"
+  />
+
+  <meta
+    property="og:description"
+    content="Expert legal consultation and court case services in Chandigarh, Mohali & Kharar."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Responsive */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
+   
     <section className="bg-gray-100 py-16 italic">
       <div className="max-w-6xl mx-auto px-6 space-y-16">
 
@@ -124,5 +175,6 @@ export default function ContactUsSection() {
 
       </div>
     </section>
+     </>
   );
 }

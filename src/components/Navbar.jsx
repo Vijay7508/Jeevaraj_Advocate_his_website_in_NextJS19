@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import { practiceAreas, legalServices } from "./Dropdown";
+import Head from "next/head";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +28,82 @@ export default function Navbar() {
   };
 
   return (
+    <>
+    <Head>
+  <title>
+    AdvoraLaw | Best Advocate & Legal Services in Chandigarh, Mohali
+  </title>
+
+  <meta
+    name="description"
+    content="AdvoraLaw provides professional legal services in Chandigarh, Mohali, Kharar and Punjab including criminal law, civil disputes, divorce cases, family matters, property disputes, cyber crime, banking, corporate and legal consultation services."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    AdvoraLaw,
+    Advocate in Chandigarh,
+    Lawyer in Mohali,
+    Best Advocate in Punjab,
+    Criminal Lawyer Chandigarh,
+    Civil Lawyer Mohali,
+    Family Lawyer Chandigarh,
+    Divorce Lawyer Punjab,
+    Property Lawyer Chandigarh,
+    Cyber Crime Lawyer Punjab,
+    Bail Lawyer Chandigarh,
+    High Court Advocate Chandigarh,
+    District Court Lawyer Chandigarh,
+    Corporate Lawyer Mohali,
+    Banking Lawyer Chandigarh,
+    Consumer Court Lawyer,
+    Immigration Lawyer Punjab,
+    Arbitration Lawyer Chandigarh,
+    Labour Court Lawyer,
+    Insurance Claim Lawyer,
+    Real Estate Lawyer Chandigarh,
+    Legal Notice Services,
+    Legal Consultation Chandigarh,
+    Chandigarh Court Advocate,
+    Mohali Advocate Services,
+    Punjab Legal Consultant,
+    Legal Services Chandigarh,
+    Best Lawyer in Mohali,
+    Top Advocate Chandigarh,
+    Advocates and Legal Consultants
+    "
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AdvoraLaw" />
+
+  {/* Open Graph SEO */}
+  <meta
+    property="og:title"
+    content="AdvoraLaw | Best Advocate & Legal Services in Chandigarh, Mohali"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional legal consultation and court case services in Chandigarh, Mohali, Kharar and Punjab."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Mobile Responsive */}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://www.advoralaw.com" />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+   
     <header
       className="sticky top-0 z-50 w-full italic
       bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900
@@ -262,5 +339,6 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
+     </>
   );
 }

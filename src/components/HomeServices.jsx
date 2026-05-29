@@ -4,6 +4,7 @@ import React from "react";
 import { FaGavel, FaRing, FaBalanceScale, FaPhoneAlt, FaWhatsapp, FaArrowRight, FaFileInvoice, FaHandsHelping } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 
 const HomeServices = () => {
   const services = [
@@ -46,6 +47,75 @@ const HomeServices = () => {
   ];
 
   return (
+    <>
+    <Head>
+  <title>
+    Area of Practice | Criminal, Bail, Marriage & Legal Services | AdvoraLaw
+  </title>
+
+  <meta
+    name="description"
+    content="Explore AdvoraLaw legal services including marriage registration, criminal law, bail matters, cheque bounce cases, domestic violence and challan legal support in Chandigarh, Mohali, Kharar and Punjab."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    Area of Practice,
+    Legal Services Chandigarh,
+    Criminal Lawyer Chandigarh,
+    Bail Lawyer Mohali,
+    Marriage Registration Lawyer,
+    Court Marriage Chandigarh,
+    Cheque Bounce Lawyer,
+    Section 138 Advocate,
+    Domestic Violence Lawyer,
+    Challan Lawyer Punjab,
+    Traffic Challan Advocate,
+    Family Lawyer Mohali,
+    Best Advocate Chandigarh,
+    Legal Consultation Punjab,
+    Criminal Defense Lawyer,
+    Bail Matters Advocate,
+    Legal Help Chandigarh,
+    Property and Civil Lawyer,
+    Trusted Legal Experts,
+    Chandigarh Court Lawyer,
+    Mohali Legal Services,
+    Punjab Legal Consultant,
+    AdvoraLaw,
+    Advocates and Legal Consultants
+    "
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AdvoraLaw" />
+
+  {/* Open Graph SEO */}
+  <meta
+    property="og:title"
+    content="Area of Practice | AdvoraLaw Legal Services"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional legal services for criminal law, bail matters, marriage registration, cheque bounce and domestic violence cases."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Mobile Responsive */}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://www.advoralaw.com" />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
     <section className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -165,6 +235,7 @@ Area of Practice
         </div>
       </div>
     </section>
+    </>
   );
 };
 

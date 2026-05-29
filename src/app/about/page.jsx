@@ -2,10 +2,110 @@
 import { FaBalanceScale, FaBullseye, FaEye } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 
 export default function AboutPage() {
   return (
+    <>
+    {/* SEO META TAGS */} 
+<Head>
+  <title>
+    About AdvoRaLaw | Trusted Legal Services in Chandigarh, Mohali & Panchkula
+  </title>
+
+  {/* SEO Meta Description */}
+  <meta
+    name="description"
+    content="AdvoRaLaw provides trusted legal services in Chandigarh, Mohali, and Panchkula including civil litigation, criminal defense, family law, property disputes, corporate legal advisory, and professional legal consultation."
+  />
+
+  {/* SEO Keywords */}
+  <meta
+    name="keywords"
+    content="
+    AdvoRaLaw,
+    advoralaw.in,
+    lawyer in Chandigarh,
+    advocate in Chandigarh,
+    law firm Chandigarh,
+    legal services Chandigarh,
+    lawyer in Mohali,
+    advocate in Mohali,
+    law firm Mohali,
+    legal services Mohali,
+    lawyer in Panchkula,
+    advocate in Panchkula,
+    law firm Panchkula,
+    legal services Panchkula,
+    best advocate Chandigarh,
+    criminal lawyer Chandigarh,
+    civil lawyer Chandigarh,
+    property lawyer Chandigarh,
+    family lawyer Chandigarh,
+    corporate lawyer Chandigarh,
+    matrimonial lawyer Mohali,
+    legal consultant Panchkula,
+    trusted law firm India,
+    legal advisor Chandigarh,
+    high court lawyer Chandigarh,
+    district court advocate,
+    professional legal services"
+  />
+
+  <meta name="author" content="AdvoRaLaw" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://advoralaw.in/about" />
+
+  {/* Open Graph SEO */}
+  <meta
+    property="og:title"
+    content="About AdvoRaLaw | Trusted Legal Services in Chandigarh, Mohali & Panchkula"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional legal solutions with integrity, excellence, and trusted advocacy services across Chandigarh, Mohali, and Panchkula."
+  />
+
+  <meta
+    property="og:url"
+    content="https://advoralaw.in/about"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:image"
+    content="https://advoralaw.in/AboutImage.png"
+  />
+
+  <meta property="og:site_name" content="AdvoRaLaw" />
+
+  {/* Twitter SEO */}
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta
+    name="twitter:title"
+    content="About AdvoRaLaw | Legal Services in Chandigarh, Mohali & Panchkula"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Expert legal services for individuals and businesses in Chandigarh, Mohali, and Panchkula."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://advoralaw.in/AboutImage.png"
+  />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+
     <main className="bg-gray-50">
 
       {/* Hero Section */}
@@ -68,7 +168,7 @@ export default function AboutPage() {
 
 
       {/* Vision & Mission */}
-     <section className="bg-gray-100 py-20 italic">
+  <section className="bg-gray-100 py-20 italic">
   <div className="max-w-7xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 animate-fadeUp">
       Vision & Mission
@@ -202,5 +302,6 @@ export default function AboutPage() {
 
 
     </main>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import {
   FaThumbsUp,
   FaBalanceScale,
 } from "react-icons/fa";
+import Head from "next/head";
 
 const WhyChooseUs = () => {
   const features = [
@@ -30,6 +31,72 @@ const WhyChooseUs = () => {
   ];
 
   return (
+    <>
+    <Head>
+  <title>
+    Why Choose AdvoraLaw | Experienced & Trusted Legal Experts
+  </title>
+
+  <meta
+    name="description"
+    content="Choose AdvoraLaw for trusted legal services backed by years of experience, ethical representation, client-focused approach and successful case resolutions in Chandigarh, Mohali and Punjab."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    Why Choose AdvoraLaw,
+    Trusted Legal Experts,
+    Experienced Advocate Chandigarh,
+    Best Lawyer Mohali,
+    Client Focused Legal Services,
+    Ethical Legal Representation,
+    High Success Rate Lawyer,
+    Professional Advocate Services,
+    Legal Experts Punjab,
+    Trusted Advocate Chandigarh,
+    Experienced Court Lawyer,
+    Criminal Lawyer Chandigarh,
+    Civil Lawyer Mohali,
+    Family Lawyer Punjab,
+    Property Lawyer Chandigarh,
+    Corporate Lawyer Mohali,
+    Legal Consultation Punjab,
+    Best Legal Consultant,
+    Reliable Lawyer Chandigarh,
+    Advocates and Legal Consultants
+    "
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AdvoraLaw" />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Why Choose AdvoraLaw | Trusted Legal Experts"
+  />
+
+  <meta
+    property="og:description"
+    content="AdvoraLaw offers experienced legal representation, ethical advocacy, client-focused solutions and successful legal services."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Mobile Responsive */}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://www.advoralaw.com" />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+   
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
 
@@ -79,6 +146,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
     </section>
+     </>
   );
 };
 

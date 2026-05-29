@@ -1,9 +1,80 @@
 "use client";
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Head from "next/head";
 
 export default function Footer() {
   return (
+    <>
+    <Head>
+  <title>
+    AdvoRaLaw Footer | Legal Services & Contact Information
+  </title>
+
+  <meta
+    name="description"
+    content="Contact AdvoRaLaw for trusted legal consultation and advocate services in Chandigarh, Mohali and Kharar. Explore quick links, privacy policy, legal resources and professional legal assistance."
+  />
+
+  <meta
+    name="keywords"
+    content="
+    AdvoRaLaw,
+    Advocate Chandigarh,
+    Lawyer Mohali,
+    Legal Services Punjab,
+    Contact Advocate Chandigarh,
+    Chandigarh District Court Lawyer,
+    Mohali Legal Consultant,
+    Kharar Advocate Services,
+    Trusted Legal Experts,
+    Criminal Lawyer Chandigarh,
+    Civil Lawyer Mohali,
+    Family Lawyer Punjab,
+    Property Lawyer Chandigarh,
+    Corporate Lawyer Mohali,
+    Legal Consultation Punjab,
+    Privacy Policy Lawyer Website,
+    Legal Disclaimer,
+    Bar Council Compliance,
+    Chandigarh Advocate Contact,
+    Legal Help Punjab,
+    Best Lawyer Chandigarh,
+    Professional Legal Services,
+    Legal Advisors Chandigarh,
+    Advocates and Legal Consultants
+    "
+  />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AdvoRaLaw" />
+
+  {/* Open Graph SEO */}
+  <meta
+    property="og:title"
+    content="AdvoRaLaw | Trusted Legal Services Chandigarh & Mohali"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional legal consultation and advocate services for criminal, civil, family and corporate matters."
+  />
+
+  <meta property="og:type" content="website" />
+
+  {/* Responsive */}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  {/* Canonical */}
+  <link rel="canonical" href="https://www.advoralaw.com" />
+
+  {/* Favicon */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+   
     <footer className="bg-gray-900 text-gray-300 mt-16 italic">
 
       {/* TOP FOOTER */}
@@ -97,5 +168,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+     </>
   );
 }
