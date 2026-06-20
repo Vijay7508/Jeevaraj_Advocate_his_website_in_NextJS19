@@ -1,50 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { FaGavel, FaRing, FaBalanceScale, FaPhoneAlt, FaWhatsapp, FaArrowRight, FaFileInvoice, FaHandsHelping } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Head from "next/head";
+import { Button } from "@mui/material";
+import { services } from "./Dropdown";
 
 const HomeServices = () => {
-  const services = [
-    {
-      title: "Marriage Registration",
-      desc: "Legal assistance for smooth and hassle-free marriage registration process.",
-      icon: "/IconMarrige.png",
-      image: "/MarrigeReg.png",
-    },
-    {
-      title: "Criminal Law",
-      desc: "Strong legal defense and representation in criminal cases.",
-      icon: "/IconCriminal.png",
-      image: "/CriminalLaw.png",
-    },
-    {
-      title: "Bail Matters",
-      desc: "Quick and effective legal support for bail-related cases.",
-      icon: "/IconBail.png",
-      image: "/Bail.png",
-    },
-    {
-      title: "Challan",
-      desc: "Legal help for traffic challans and related notices issued by authorities.",
-      icon: "/IconChallan.png" ,
-      image: "/Challan.png",
-    },
-    {
-      title: "Cheque Bounce",
-      desc: "Expert legal support under Section 138 for cheque bounce matters.",
-      icon: "/IconBounce.png",
-      image: "/Bounce.png",
-    },
-    {
-      title: "Domestic Violence",
-      desc: "Sensitive and strong legal assistance for domestic violence cases.",
-      icon: "/IconDomesticVoilence.png",
-      image: "/DomesticVoilence.png",
-    },
-  ];
+  const [showAll, setshowAll] = useState(false);
 
   return (
     <>
@@ -111,7 +76,7 @@ const HomeServices = () => {
   />
 
   {/* Canonical URL */}
-  <link rel="canonical" href="https://www.advoralaw.com" />
+  <link rel="canonical" href="https://www.advoralaw.com"/>
 
   {/* Favicon */}
   <link rel="icon" href="/favicon.ico" />
@@ -131,7 +96,8 @@ Area of Practice
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((item, idx) => {
+          {services.slice(0, showAll? services.length : 6)
+          .map((item, idx) => {
             const Icon = item.icon;
 
             return (
@@ -144,7 +110,7 @@ Area of Practice
                 className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
               >
                 {/* Image */}
-                <div className="h-52 overflow-hidden relative group">
+                <div className="h-fit overflow-hidden relative group">
   <Image
     src={item.image}
     alt={item.title}
@@ -193,7 +159,7 @@ Area of Practice
   hover:bg-yellow-500 hover:text-white shadow-md hover:shadow-lg
   flex items-center justify-center"
 >
-  <FaPhoneAlt className="text-lg" />
+  <FaPhoneAlt className="text-lg"/>
 </motion.button>
 
 
@@ -233,7 +199,31 @@ Area of Practice
             );
           })}
         </div>
+        
       </div>
+     <div className="flex justify-center mt-10">
+  <button
+    onClick={() => setshowAll(!showAll)}
+    className="
+      px-8 py-3
+      bg-gradient-to-r from-yellow-500 to-orange-500
+      text-white font-semibold
+      rounded-full
+      shadow-lg
+      hover:shadow-2xl
+      hover:scale-105
+      transition-all duration-300
+      flex items-center gap-2
+    "
+  >
+    {showAll ? "Show Less" : "Explore More"}
+    <FaArrowRight
+      className={`transition-transform duration-300 ${
+        showAll ? "rotate-90" : ""
+      }`}
+    />
+  </button>
+</div>
     </section>
     </>
   );
