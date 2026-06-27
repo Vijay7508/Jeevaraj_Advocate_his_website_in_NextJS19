@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
-import { practiceAreas, legalServices } from "./Dropdown";
+import { practiceAreasContent, legalServices } from "./Dropdown";
 import Head from "next/head";
 
 export default function Navbar() {
@@ -157,14 +157,15 @@ export default function Navbar() {
               transition-all duration-200
               ${practiceOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
             >
-              {practiceAreas.map((item) => (
+              {practiceAreasContent.map((item) => (
                 <Link
-                  key={item}
-                  href={`/practice-areas/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-gray-300 hover:text-amber-400 transition"
-                >
-                  {item}
-                </Link>
+    key={item.slug}
+    href={`/practice-areas/${item.slug}`}
+    className="text-gray-300 hover:text-amber-400 transition"
+  >
+    {item.title}
+  </Link>
+
               ))}
             </div>
           </div>
