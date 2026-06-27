@@ -220,7 +220,7 @@ export default function ContactUsSection() {
         className="inline-flex items-center gap-3 bg-green-500 px-8 py-4 rounded-full font-semibold hover:scale-105 transition-all"
       >
         <FaWhatsapp />
-        Start WhatsApp Consultation
+        Start WhatsApp Consultations
       </a>
     </div>
 

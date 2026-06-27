@@ -301,7 +301,7 @@ export default function Navbar() {
                     {section.items.map((item) => (
                       <li key={item}>
                         <Link
-                          href={`/legal-services/${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                          href={`/legal_services/${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                           onClick={() => setMenuOpen(false)}
                           className="text-sm text-gray-400 hover:text-amber-400"
                         >
