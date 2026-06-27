@@ -88,72 +88,84 @@ export const legalServices = [
 export const services = [
   {
     title: "Marriage Registration",
+    slug:"marriage-registration",
     desc: "Legal assistance for smooth and hassle-free marriage registration process.",
     icon: "/IconMarrige.png",
     image: "/MarrigeReg.png",
   },
   {
     title: "Criminal Law",
+    slug:"criminal-law",
     desc: "Strong legal defense and representation in criminal cases.",
     icon: "/IconCriminal.png",
     image: "/CriminalLaw.png",
   },
   {
     title: "Bail Matters",
+    slug:"bail-matters",
     desc: "Quick and effective legal support for bail-related cases and urgent court matters.",
     icon: "/IconBail.png",
     image: "/Bail.png",
   },
   {
     title: "Civil Litigation",
+    slug:"civil-litigation",
     desc: "Comprehensive legal representation in civil disputes and litigation matters.",
     icon: "/IconCivil.png",
     image: "/Civil.png",
   },
   {
     title: "Family & Matrimonial Law",
+    slug:"family-matrimonial-law",
     desc: "Legal guidance for divorce, maintenance, custody, and family disputes.",
     icon: "/IconFamily.png",
     image: "/FamilyLaw.png",
   },
   {
     title: "Labour & Employment Law",
+    slug:"labour-employment-law",
     desc: "Professional assistance in workplace disputes and employment matters.",
     icon: "/IconLabour.png",
     image: "/Labour.png",
   },
   {
     title: "Corporate & Commercial Law",
+    slug:"corporate-commercial-law",
     desc: "Legal solutions for businesses, contracts, and corporate compliance.",
     icon: "/IconCorporate.png",
     image: "/CorporateLaw.png",
   },
   {
     title: "Property & Real Estate Law",
+    slug:"property-real-estate-law",
     desc: "Expert legal support for property transactions and disputes.",
     icon: "/IconProperty.png",
     image: "/PropertyLaw.png",
   },
   {
     title: "Cheque Bounce / NI Act",
+    slug: "cheque-bounce-ni-act",
     desc: "Expert legal support under Section 138 for cheque bounce matters.",
     icon: "/IconBounce.png",
     image: "/Bounce.png",
   },
   {
     title: "Consumer Protection",
+    slug:"consumer-protection",
     desc: "Legal representation for consumer rights and grievance redressal.",
     icon: "/IconConsumer.png",
     image: "/ConsumerLaw.png",
   },
   {
     title: "Service Matters",
+    slug:"service-matters",
     desc: "Assistance in government and private service-related legal disputes.",
     icon: "/IconService.png",
     image: "/ServiceLaw.png",
   },
   {
     title: "Arbitration & Mediation",
+    slug:"arbitratio-mediation",
     desc: "Alternative dispute resolution through arbitration and mediation services.",
     icon: "/IconArbitration.png",
     image: "/Arbitration.png",
@@ -742,81 +754,7 @@ Whether you are facing issues with a product, service provider, builder, bank, o
     "Dedicated support for consumer justice"
   ]
 },
-{
-  slug: "arbitration-mediation",
-  title: "Arbitration & Mediation",
-  shortDescription:
-    "Expert legal support in arbitration, mediation, and alternative dispute resolution (ADR) for efficient and cost-effective settlement of disputes.",
 
-  overview:
-    "Arbitration and Mediation are key forms of Alternative Dispute Resolution (ADR) that help parties resolve disputes outside traditional court litigation. We provide professional legal assistance in resolving commercial, civil, contractual, and business disputes through arbitration proceedings and mediated settlements, ensuring faster, confidential, and cost-effective outcomes.",
-
-  content: `
-Arbitration and Mediation offer structured yet flexible methods to resolve disputes without prolonged court litigation. These processes are widely used in commercial agreements, business conflicts, construction disputes, and contractual disagreements.
-
-Our legal team represents clients in arbitration proceedings and mediation sessions, ensuring that their rights and interests are fully protected while working toward efficient dispute resolution.
-
-Our Arbitration & Mediation Services Include:
-
-• Arbitration Proceedings  
-Representation in domestic and institutional arbitration for resolution of contractual, commercial, and civil disputes.
-
-• Mediation & Settlement Negotiations  
-Assistance in resolving disputes amicably through mediation, negotiation, and settlement discussions.
-
-• Commercial Arbitration  
-Handling disputes between businesses, including partnership disputes, vendor conflicts, and breach of contract matters.
-
-• Construction & Infrastructure Disputes  
-Representation in arbitration involving builders, contractors, developers, and infrastructure projects.
-
-• Contractual Disputes  
-Resolution of disputes arising from service agreements, employment contracts, lease agreements, and business contracts.
-
-• Drafting Arbitration Clauses  
-Preparation and review of arbitration clauses in agreements to ensure enforceability and clarity.
-
-• Enforcement & Challenge of Arbitral Awards  
-Legal assistance in enforcing arbitration awards or challenging them before competent courts.
-
-• Institutional Arbitration Support  
-Representation in proceedings before arbitration institutions and tribunals.
-
-Why Choose Our Arbitration & Mediation Services?
-
-We focus on delivering efficient, confidential, and result-oriented dispute resolution. Our approach emphasizes minimizing litigation costs and time while protecting client interests through strategic negotiation and strong legal representation.
-
-Whether you are a business, developer, or individual facing a dispute, we provide skilled advocacy in arbitration and mediation forums to achieve practical and enforceable solutions.
-  `,
-
-  services: [
-    "Domestic Arbitration",
-    "Commercial Arbitration",
-    "Construction Arbitration",
-    "Contractual Dispute Resolution",
-    "Mediation & Negotiation",
-    "Settlement Agreements",
-    "Arbitration Clause Drafting",
-    "Enforcement of Awards",
-    "Challenge of Arbitral Awards",
-    "Institutional Arbitration",
-    "Business Dispute Resolution",
-    "ADR Legal Representation"
-  ],
-
-  benefits: [
-    "Faster dispute resolution than litigation",
-    "Cost-effective legal process",
-    "Confidential proceedings",
-    "Expert arbitration representation",
-    "Skilled mediation and negotiation support",
-    "Strong commercial dispute handling",
-    "Legal protection of contractual rights",
-    "Enforcement and challenge expertise",
-    "Strategic settlement approach",
-    "Professional ADR guidance from start to finish"
-  ]
-},
 {
   slug: "arbitratio-mediation",
   title: "Arbitration & Mediation",
@@ -1037,79 +975,77 @@ Whether you are a government employee facing disciplinary action or seeking prom
   ]
 }, 
 {
-  slug: "legal-compliance-advisory",
-  title: "Legal Compliance & Advisory",
+  slug: "marriage-registration",
+  title: "Marriage Registration",
   shortDescription:
-    "Comprehensive legal advisory and compliance services for businesses, ensuring regulatory adherence, risk management, and statutory compliance.",
+    "Legal assistance in marriage registration, court marriage, special marriage act procedures, and documentation for legally valid marriage certificates.",
 
   overview:
-    "Legal Compliance & Advisory services help businesses, startups, and organizations comply with applicable laws, regulations, and statutory requirements. We provide strategic legal guidance to ensure smooth business operations while minimizing legal risks and ensuring full regulatory compliance.",
+    "Marriage Registration is a legal process that officially records a marriage under the law, ensuring legal recognition and protection of marital rights. We provide complete assistance in court marriages, registration under Hindu Marriage Act and Special Marriage Act, and preparation of all required documentation for a smooth and hassle-free process.",
 
   content: `
-In today’s complex regulatory environment, businesses must comply with multiple laws, rules, and government regulations. Non-compliance can lead to penalties, litigation, and reputational damage.
+Marriage registration is an essential legal requirement that provides official recognition to a marriage and ensures legal protection for both spouses. It is also required for various legal, financial, and immigration purposes.
 
-Our legal team provides end-to-end compliance and advisory services to help businesses operate legally, efficiently, and with full regulatory confidence.
+Our legal team assists couples in completing the entire marriage registration process efficiently, ensuring compliance with all legal formalities and documentation requirements.
 
-Our Legal Compliance & Advisory Services Include:
+Our Marriage Registration Services Include:
 
-• Business Legal Compliance  
-Advisory on day-to-day legal compliance requirements under applicable laws for businesses and organizations.
+• Court Marriage  
+Assistance in solemnization of marriage before a Marriage Officer under applicable laws with complete legal support.
 
-• Company & Corporate Compliance  
-Assistance with Companies Act compliance, board resolutions, filings, and corporate governance matters.
+• Hindu Marriage Registration  
+Registration of marriage under the Hindu Marriage Act, 1955 including documentation and certificate issuance.
 
-• Labour Law Compliance  
-Guidance on compliance with labour laws including EPF, ESIC, minimum wages, and workplace regulations.
+• Special Marriage Act Registration  
+Legal assistance for inter-caste, inter-religion, and NRI marriages under the Special Marriage Act, 1954.
 
-• Contract Drafting & Review  
-Preparation and review of business contracts, vendor agreements, service agreements, and commercial documents.
+• Documentation Support  
+Preparation and verification of required documents such as affidavits, identity proofs, photographs, and age proof.
 
-• Regulatory Advisory  
-Legal guidance on sector-specific regulations, licensing, and approvals.
+• Notice & Application Filing  
+Assistance in filing marriage registration applications and required legal notices with authorities.
 
-• Risk Assessment & Legal Audits  
-Identification of legal risks and compliance gaps through structured legal audits.
+• Witness Arrangement Guidance  
+Support in understanding witness requirements and legal formalities during registration.
 
-• Policy Drafting  
-Drafting internal policies such as HR policies, employment policies, privacy policies, and workplace guidelines.
+• Marriage Certificate Issuance  
+End-to-end assistance in obtaining legally valid marriage certificates from competent authorities.
 
-• Startup Legal Advisory  
-Legal support for startups including incorporation guidance, structuring, and compliance roadmap.
+• Legal Advisory for Marriage Laws  
+Guidance on legal rights, procedures, and implications related to marriage registration.
 
-• Dispute Prevention Strategy  
-Proactive legal planning to avoid litigation and reduce legal exposure.
+Why Choose Our Marriage Registration Services?
 
-Why Choose Our Legal Compliance & Advisory Services?
+We ensure a smooth, fast, and legally compliant marriage registration process with minimal delays and complete documentation support. Our approach is client-friendly, confidential, and focused on hassle-free completion of legal formalities.
 
-We help businesses stay legally compliant while focusing on growth and operations. Our approach is preventive, strategic, and tailored to each client’s industry and requirements.
-
-Whether you are a startup, SME, or established business, we provide reliable legal guidance, structured compliance solutions, and ongoing advisory support to ensure smooth and lawful operations.
+Whether it is a court marriage or registration under applicable marriage laws, we provide complete legal assistance from start to finish.
   `,
 
   services: [
-    "Business Legal Compliance",
-    "Corporate Compliance (Companies Act)",
-    "Labour Law Compliance",
-    "Contract Drafting & Review",
-    "Regulatory Advisory",
-    "Legal Risk Assessment",
-    "Legal Audits",
-    "Policy Drafting",
-    "Startup Legal Advisory",
-    "Compliance Documentation",
-    "Dispute Prevention Strategy",
-    "Corporate Governance Support"
+    "Court Marriage Assistance",
+    "Hindu Marriage Registration",
+    "Special Marriage Act Registration",
+    "Marriage Certificate Assistance",
+    "Document Preparation & Verification",
+    "Affidavit Drafting",
+    "Legal Notice & Application Filing",
+    "Witness Coordination Guidance",
+    "Inter-Caste Marriage Support",
+    "Inter-Religion Marriage Support",
+    "NRI Marriage Registration Assistance",
+    "Legal Advisory on Marriage Laws"
   ],
 
   benefits: [
-    "Reduced legal and regulatory risks",
-    "Strong corporate compliance framework",
-    "Expert contract drafting and review",
-    "Proactive legal risk management",
-    "Startup-friendly legal guidance",
-    "Industry-specific compliance support",
-    "Improved business governance",
-    "Prevention of legal disputes",
+    "Quick and hassle-free registration process",
+    "Complete legal documentation support",
+    "Assistance under all marriage laws",
+    "Confidential and professional handling",
+    "Guidance for court marriage procedures",
+    "Error-free application filing",
+    "Step-by-step procedural guidance",
+    "End-to-end assistance until certificate issuance"
   ]
 }
+
 ];

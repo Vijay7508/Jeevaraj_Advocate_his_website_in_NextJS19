@@ -7,7 +7,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { Button } from "@mui/material";
 import { services } from "./Dropdown";
-
+import Link from "next/link";
 const HomeServices = () => {
   const [showAll, setshowAll] = useState(false);
 
@@ -183,6 +183,8 @@ Area of Practice
 
 
   {/* View Details */}
+  <Link href={`/practice-areas/${item.slug}`}>
+
   <motion.button
     whileHover={{ y: -6, scale: 1.1 }}
     whileTap={{ scale: 0.95 }}
@@ -191,6 +193,7 @@ Area of Practice
   >
 <FaArrowRight className="text-lg group-hover:rotate-45 transition-transform duration-300" />
   </motion.button>
+  </Link>
 </div>
 
 
